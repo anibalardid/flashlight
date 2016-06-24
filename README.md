@@ -16,7 +16,7 @@ So, I'm testing developing apps with Ionic Framework, and my firsts works I'm do
 To start using ionic, you have two options: copy over the built JS and CSS files, or
 use the `ionic` tool ([ionic-cli](https://github.com/driftyco/ionic-cli)) which can be installed through npm (recommended): _(You may need to prefix the command with `sudo` depending on your OS and setup.)_
 
-Additionally, we have a desktop GUI tool that we recently released called [Ionic Lab](http://lab.ionic.io). If you try it, let us know what you think!
+Additionally, Ionic have a desktop GUI tool that we recently released called [Ionic Lab](http://lab.ionic.io). If you try it, let us know what you think!
 
 To get started with the CLI flow, fire up your terminal and run:
 
