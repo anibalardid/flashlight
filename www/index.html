@@ -24,15 +24,14 @@
 </head>
 <body ng-app="starter">
 
-    <ion-pane>
-        <ion-header-bar class="bar-energized">
-            <h1 class="title">Linterna</h1>
-        </ion-header-bar>
-
+    <ion-pane style="background-color: #000;">
         <ion-content ng-controller="myCtrl">
-            <div style="margin-top: 100px;">
-                <center>
-                    <button class="button button-calm" ng-click="call()">on/off</button>
+            <div style="margin-top: 150px;">
+                <center ng-show="isOff">
+                    <a ng-click="turnon()"><img class="buttonpower" src="img/button_red.png" ></a>
+                </center>
+                <center ng-show="isOn">
+                    <a ng-click="turnoff()"><img class="buttonpower" src="img/button_blue.png" ></a>
                 </center>
                 
             </div>

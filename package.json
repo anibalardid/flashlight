@@ -18,6 +18,10 @@
     {
       "locator": "https://github.com/EddyVerbruggen/Flashlight-PhoneGap-Plugin.git",
       "id": "cordova-plugin-flashlight"
+    },
+    {
+      "locator": "https://github.com/apache/cordova-plugin-statusbar.git",
+      "id": "cordova-plugin-statusbar"
     }
   ],
   "cordovaPlatforms": [
