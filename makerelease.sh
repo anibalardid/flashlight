@@ -15,10 +15,8 @@ echo "Making New Release"
 echo ""
 echo "Building android release"
 echo ""
-if [ -d "platform/android" ]
+if [ ! -d "platform/android/" ]
 then
-    echo ""
-else
 	ionic platform add android
 fi
 
