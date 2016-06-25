@@ -22,7 +22,8 @@
     {
       "locator": "https://github.com/apache/cordova-plugin-statusbar.git",
       "id": "cordova-plugin-statusbar"
-    }
+    },
+    "cordova-plugin-flashlight"
   ],
   "cordovaPlatforms": [
     "android"

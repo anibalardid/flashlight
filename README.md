@@ -37,7 +37,8 @@ Download and install dependencies:
 ```bash
 git clone https://github.com/anibalardid/flashlight.git
 cd flashlight
-npm install
+npm install && bower install
+ionic state reset OR ionic state restore --plugins
 ```
 
 Run in browser into lab mode:

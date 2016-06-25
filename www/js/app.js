@@ -46,4 +46,15 @@ ionicApp.controller('myCtrl', function($scope, $cordovaFlashlight){
         );
     };
 
+    document.addEventListener("backbutton", function() {
+        $cordovaFlashlight.switchOff()
+        .then(
+            function (success) { },
+            function (error) { 
+                $scope.isOn  = true;
+                $scope.isOff = false;
+            }
+        );
+    }, false);
+
 });

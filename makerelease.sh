@@ -15,13 +15,31 @@ echo "Making New Release"
 echo ""
 echo "Building android release"
 echo ""
+if [ -d "platform/android" ]
+then
+    echo ""
+else
+	ionic platform add android
+fi
+
 ionic build android
 ionic build android --release
 
 echo ""
-echo "Copiying unsigned apk to base path"
+echo "Copying unsigned apk to base path"
 echo ""
 cp platforms/android/build/outputs/apk/android-release-unsigned.apk .
+
+if [ -f "$1.keystore" ]
+then
+    echo ""
+else
+	echo ""
+	echo "Generete private key"
+	echo ""
+	keytool -genkey -v -keystore $1.keystore -alias $1 -keyalg RSA -keysize 2048 -validity 10000
+fi
+
 
 echo ""
 echo "Signing unsigned apk file"
@@ -31,7 +49,7 @@ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore $1.keystore and
 echo ""
 echo "Zipaligning apk file"
 echo ""
-/home/aardid/Android/Sdk/build-tools/23.0.3/zipalign -v 4 android-release-unsigned.apk $1.apk
+/home/anibal/tmp/android-sdk-linux/build-tools/23.0.3/zipalign -v 4 android-release-unsigned.apk $1.apk
 
 if [ -f "$file" ]
 then
