@@ -1,8 +1,13 @@
 // Ionic Starter App
 
-var ionicApp = angular.module('starter', ['ionic', 'ngCordova'])
+var ionicApp = angular.module('starter', [
+    'ionic',
+    'ionic.service.core', 
+    'ionic.service.analytics', 
+    'ngCordova'
+])
 
-ionicApp.run(function($ionicPlatform) {
+ionicApp.run(function($ionicPlatform, $ionicAnalytics) {
     $ionicPlatform.ready(function() {
         if(window.cordova && window.cordova.plugins.Keyboard) {
             cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
@@ -12,6 +17,8 @@ ionicApp.run(function($ionicPlatform) {
             window.StatusBar.overlaysWebView(false);
             window.StatusBar.styleHex('#000000');
         }
+
+        $ionicAnalytics.register();
     });
 });
 

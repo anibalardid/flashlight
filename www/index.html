@@ -14,10 +14,12 @@
 
 <!-- ionic/angularjs js -->
 <script src="lib/ionic/js/ionic.bundle.js"></script>
+<script src="lib/ionic-platform-web-client/dist/ionic.io.bundle.min.js"></script>
 
 <!-- cordova script (this will be a 404 during development) -->
 <script src="lib/ngCordova/dist/ng-cordova.js"></script>
-<script src="cordova.js"></script>
+<!-- Cordova is bootstrapped by ionic-platform-web-client, uncomment this if you remove ionic-platform-web-client... -->
+<!-- <script src="cordova.js"></script> -->
 
 <!-- your app's js -->
 <script src="js/app.js"></script>
@@ -28,10 +30,10 @@
         <ion-content ng-controller="myCtrl">
             <div style="margin-top: 150px;">
                 <center ng-show="isOff">
-                    <a ng-click="turnon()"><img class="buttonpower" src="img/button_red.png" ></a>
+                    <a ng-click="turnon()"><img class="buttonpower" src="img/button_red.png"></a>
                 </center>
                 <center ng-show="isOn">
-                    <a ng-click="turnoff()"><img class="buttonpower" src="img/button_blue.png" ></a>
+                    <a ng-click="turnoff()"><img class="buttonpower" src="img/button_blue.png"></a>
                 </center>
                 
             </div>

@@ -47,7 +47,7 @@ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore $1.keystore and
 echo ""
 echo "Zipaligning apk file"
 echo ""
-/home/anibal/tmp/android-sdk-linux/build-tools/23.0.3/zipalign -v 4 android-release-unsigned.apk $1.apk
+/home/anibal/tmp/android-sdk-linux/build-tools/19.1.0/zipalign -v 4 android-release-unsigned.apk $1.apk
 
 if [ -f "$file" ]
 then
